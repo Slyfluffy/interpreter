@@ -17,6 +17,7 @@
 #include "gun.h"
 #include "time.h"
 #include "score.h"
+#include "context.h"
 
 #include <list>
 
@@ -42,6 +43,7 @@ public:
 
     // is the game currently playing right now?
     bool isPlaying() const { return time.isPlaying();  }
+    
 private:
     // generate new birds
     void spawn();                  
@@ -58,4 +60,5 @@ private:
     Score score;                   // the player's score
     HitRatio hitRatio;               // the hit ratio for the birds
     Point dimensions;              // size of the screen
+    Context context;
 };
